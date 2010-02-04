@@ -1,3 +1,12 @@
 uc_aria is an example app of one way to implement aria in web2py.
 
-2010 - implemented menu/right_menu.html in aria. Seems to be working fine.
+2010-01-05
+- implemented menu/right_menu.html in aria. Seems to be working fine.
+- removed access keys for the time being.
+
+access keys menu item example
+
+        [<li><a href="{{=URL(r=request,c='default',f='index')}}" "accesskey="m"">{{=T('main')}}</a></li>
+
+
+We would need to be able to turn this off and on and to configure the access keys as well other wise it may interfere with various screen reader configurations, browsers, (JAWS...)

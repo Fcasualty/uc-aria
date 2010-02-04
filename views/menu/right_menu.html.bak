@@ -38,14 +38,14 @@ div#nav_aria a:hover, div#nav_aria a:focus {
 <div id="nav_aria" style="text-align: right;">
     <h2 class="nav" id="nav_aria_label">Site Menu</h2>
     <ul id="navigation1" role="navigation" aria-labelledby="nav_aria_label" tabindex="-1">
-        [ <li><a href="{{=URL(r=request,c='default',f='index')}}" "accesskey="m"">{{=T('main')}}</a></li>
+        [<li><a href="{{=URL(r=request,c='default',f='index')}}" "accesskey="m"">{{=T('main')}}</a></li>
         |<li><a href="{{=URL(r=request,c='news',f='news_index')}}" "accesskey="n"">{{=T('news')}}</a></li>
         |<li><a href="{{=URL(r=request,c='language',f='aria_lang_index')}}" "accesskey="l"">{{=T('language')}} : {{=session._language}}</a></li>
         {{pass}}
         {{if not session.authorized:}}
-            |<li><a href="{{=URL(a='admin' ,c='default',f='site')}}" "accesskey="a"">{{=T('admin')}}</a></li>
+            |<li><a href="{{=URL(a='admin' ,c='default',f='site')}}" "accesskey="a"">{{=T('admin')}}</a></li>]
         {{else:}}
-            |<li><a href="{{=URL(a='admin' ,c='default',f='logout')}}" "accesskey="a"">{{=T('admin_logout')}}</a></li>
+            |<li><a href="{{=URL(a='admin' ,c='default',f='logout')}}" "accesskey="a"">{{=T('admin_logout')}}</a></li>]
         {{pass}}
         </ul>
 </div>

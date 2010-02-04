@@ -1,1 +1,3 @@
 uc_aria is an example app of one way to implement aria in web2py.
+
+2010 - implemented menu/right_menu.html in aria. Seems to be working fine.
