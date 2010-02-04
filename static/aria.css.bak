@@ -1,0 +1,346 @@
+h2.nav {
+  position: absolute;
+  top: -20em;
+  left: -200em;
+}
+
+div#title a {
+ color: white;
+ text-decoration: none;
+}
+
+div#title a:link, div#title a:visited {
+ color: white;
+}
+
+div#title a:hover, div#title a:focus {
+ color: rgb(204,102,0);
+}
+
+span.title {
+ font-size: 150%;
+}
+
+div#nav1 {
+ margin: 0;
+ padding: 0;
+ padding-top: 0.25em;
+ padding-bottom: 0.25em;
+ border-bottom: rgb(56,56,73) 1px solid;
+ width: 100%;
+ color: white;
+ background-color: #f5b673;
+ text-align: center;
+}
+
+div#nav1 ul {
+ padding: 0px;
+ margin: 0px;
+}
+
+div#nav1 li {
+ display: inline;
+ padding-left: 0.5em;
+ background-image: url(../images/separator-1.png);
+ background-repeat: no-repeat;
+ background-position: left center;
+}
+
+div#nav1 li.nobullet {
+ background-image: none;
+}
+
+div#nav1 a {
+ padding: 0px;
+ padding-right: 0.25em;
+ padding-left: 0.25em;
+ text-decoration: none;
+}
+
+div#nav1 a:link, div#nav1 a:visited {
+ font-weight: bold;
+ color: rgb(56,56,73);
+}
+
+div#nav1 a:hover, div#nav1 a:focus {
+ color: #f5b673;
+ background-color: rgb(56,56,73);
+}
+
+div#nav2 {
+ margin: 0px;
+ padding: 0px;
+ padding-bottom: 0.25em;
+ padding-top: 0.25em;
+ border-bottom: rgb(56,56,73) 1px solid;
+ width: 100%;
+ color: rgb(56,56,73);
+ background-color: white;
+ text-align: center;
+ font-family: "times new roman", times, sans-serif;
+}
+
+div#nav2 ul {
+ padding: 0px;
+ margin: 0px;
+}
+
+div#nav2 li {
+ margin: 0px;
+ padding: 0px;
+ padding-left: 0.5em;
+ display: inline;
+ background-image: url(../images/separator-2.jpg);
+ background-repeat: no-repeat;
+ background-position: left center;
+}
+
+div#nav2 li.nobullet {
+ background-image: none;
+}
+
+div#nav2 a {
+ margin: 0px;
+ padding: 0px;
+ padding-right: 0.25em;
+ padding-left: 0.25em;
+ text-decoration: none;
+}
+
+div#nav2 a:link, div#nav2 a:visited {
+ font-weight: bold;
+ color: rgb(56,56,73);
+}
+
+div#nav2 a:hover, div#nav2 a:focus {
+ color: #f5b673;
+ background-color: rgb(56,56,73);
+}
+
+div#leftnav {
+ margin: 0px;
+ padding: 0px;
+ float: left;
+ width: 20%;
+ background-color: rgb(192,192,192);
+}
+
+div#leftnav ul {
+ background-color: rgb(228,230,234);
+ padding: 0;
+ margin: 0;
+ list-style-type: none;
+ text-align: right;
+ padding-bottom: 5em;
+}
+
+div#leftnav li {
+ padding-top: 1em;
+ padding-bottom: 0.25em;
+ padding-right: 0.5em;
+}
+
+div#leftnav li a {
+ padding: 0px;
+ padding-right: 0.25em;
+ padding-left: 0.5em;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+div#leftnav li a:link, div#leftnav li a:visited {
+ color: rgb(56,56,73);
+}
+
+div#leftnav li a:hover, div#leftnav li a:focus {
+ color: #f5b673;
+ background-color: rgb(56,56,73);
+}
+
+div#leftnav form {
+ margin: 0;
+ padding: 0;
+ padding-top: .5em;
+ padding-bottom: .5em;
+ background-color: rgb(228,230,234);
+ border-top: black solid 1px;
+ border-bottom: black solid 1px;
+ text-align: center;
+}
+
+div#leftnav label {
+ font-weight: bold;
+}
+
+div#leftnav input {
+ margin: .25em;
+}
+
+div#leftnav h4 {
+ margin: 0;
+ margin-top: .5em;
+ padding: 0;
+ background-color: rgb(192,192,192);
+ font-family: sans-serif;
+ letter-spacing: 0.07em;
+ font-size: 100%;
+ width: 100%;
+}
+
+div#leftnav dl {
+ margin: 0px;
+ padding-left: .25em;
+ padding-bottom: 1em;
+ font-family: sans-serif;
+ letter-spacing: 0.07em;
+ font-size: 80%;
+}
+
+div#leftnav dt {
+ margin: 0;
+ padding: 0;
+ padding-top: 1em;
+ font-weight: bold;
+}
+
+div#leftnav dd {
+ margin: 0;
+ padding: 0;
+ margin-left: .5em;
+ letter-spacing: 0;
+}
+
+div#leftnav dd a {
+ font-weight: normal;
+ text-decoration: underline;
+ font-weight: bold;
+}
+
+div#leftnav dd a:link, div#leftnav dd a:visited {
+ color: rgb(56,56,73);
+}
+
+div#leftnav dd a:hover, div#leftnav dd a:focus {
+ color: #000000;
+}
+
+div#content-col-1 a,
+div#content-col-2 a,
+ {
+  text-decoration: none;
+  color: black;
+}
+
+div#content-col-1 {
+ margin: 0;
+ padding: 0;
+ padding-top: 60px;
+ padding-right: 1.5em;
+ padding-left: 1.5em;
+ font-size: 90%;
+ float: left;
+ width: 25%;
+ color: black;
+ background-color: white;
+}
+
+div#content-col-1 h2 {
+ margin: 0px;
+ padding: 0px;
+ color: rgb(240,120,0);
+ font-family: sans-serif;
+ letter-spacing: 0.07em;
+ font-size: 180%;
+}
+
+div#content-col-2 {
+ margin: 0;
+ padding: 0.25em;
+ padding-top: 260px;
+ float: right;
+ width: 45%;
+ color: black;
+ background-image: url(../images/alma_close.jpg);
+ background-repeat: no-repeat;
+ background-color: white;
+ background-position: 5px 60px;
+}
+
+div#content-col-2 dl {
+ font-size: 90%;
+}
+
+div#content-col-2 dt {
+ margin-top: 1.5em;
+ font-weight: bold;
+}
+
+div#content-col-2 dd {
+ margin: 0;
+ margin-left: .5em;
+}
+
+div#bottomnav {
+ clear: both;
+ padding: 0px;
+ margin: 0px;
+ padding-left: 20%;
+ background-color: rgb(192,192,192);
+}
+
+div#bottomnav div {
+ margin: 0px;
+ padding: 0px;
+ padding-left: 1em;
+ padding-right: 1em;
+ background-color: white;
+}
+
+div#bottomnav ul {
+ margin: 0px;
+ padding-top: 0.5em;
+ padding-bottom: 0.5em;
+ padding: 0px;
+ text-align: center;
+ border-top: rgb(240,120,0) 1px solid;
+ background-color: white;
+}
+
+div#bottomnav li {
+ margin: 0;
+ padding: 0;
+ display: inline;
+ background-image: url(../images/separator-3.jpg);
+ background-repeat: no-repeat;
+ background-position: left center;
+}
+
+div#bottomnav a {
+ margin: 0px;
+ padding: 0;
+ padding-left: 1.0em;
+ padding-right: 0.5em;
+ text-decoration: none;
+ font-size: 70%;
+}
+
+div#bottomnav li.nobullet {
+ background-image: none;
+ }
+
+div#bottomnav a:link, div#bottomnav a:visited {
+ font-weight: bold;
+ color: rgb(56,56,73);
+}
+
+div#bottomnav a:hover, div#bottomnav a:focus {
+ color: #f5b673;
+ background-color: rgb(56,56,73);
+}
+
+div#copyright {
+ text-align: center;
+ font-size: 70%;
+ font-weight: bold;
+ margin-top: .5em;
+}

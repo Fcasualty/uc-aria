@@ -1,0 +1,15 @@
+<div id="leftnav">
+
+    <h2 class="nav" id="leftnav_label">Career Center Services</h2>
+    <ul id="navigation3" role="navigation" aria-labelledby="leftnav_label" tabindex="-1">
+      <li><a href="http://www.uiuc.edu/">Career Home</a></li>
+      <li><a href="http://www.uiuc.edu/">Career Counseling</a></li>
+      <li><a href="http://www.uiuc.edu/">Pre-Health Advising</a></li>
+      <li><a href="http://www.uiuc.edu/">Services</a></li>
+
+      <li><a href="http://www.uiuc.edu/">Workshops</a></li>
+      <li><a href="http://www.uiuc.edu/">Resource Center</a></li>
+      <li><a href="http://www.uiuc.edu/">Question Board/FAQ</a></li>
+    </ul>
+
+</div>
