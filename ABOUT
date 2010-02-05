@@ -1,10 +1,80 @@
-uc_aria is an example app of one way to implement aria in web2py.
+uc_aria is an example app using aria menus in a web2py application.
 
 2010-01-05
 - implemented menu/right_menu.html in aria. Seems to be working fine.
 - removed access keys for the time being.
 
-access keys menu item example
+Instructions for creating the application.
+
+Views
+=====
+
+layout.html
+-----------
+around line 18 of layout.html insert {{include 'menu/aria_site_menu.html'}} just after the line <h3>{{=response.subtitle or ''}}</h3> as follows:
+
+	{{include 'menu/aria_site_menu.html'}}
+
+menu/aria\_site\_menu.html
+------------------------
+Create the file menu/aria\_site\_menu.html in the Views section and insert the following code. Eventually you may want to migrate out the CSS.
+
+	<style type="text/css">
+	h2.nav {
+	position: absolute;
+	top: -20em;
+	left: -200em;
+	}
+	
+	div#nav_aria li, h2 {
+	display: inline;
+	padding-left: 0.5em;
+	background-repeat: no-repeat;
+	background-position: left center;
+	}
+	
+	div#nav_aria li.nobullet {
+	background-image: none;
+	}
+	
+	div#nav_aria a {
+	padding: 0px;
+	padding-right: 0.25em;
+	padding-left: 0.25em;
+	text-decoration: none;
+	}
+	
+	div#nav_aria a:link, div#nav_aria a:visited {
+	font-weight: bold;
+	}
+	
+	div#nav_aria a:hover, div#nav_aria a:focus {
+	color: #f5b673;
+	background-color: rgb(56,56,73);
+	}
+	</style>
+	
+	<div id="nav_aria" style="text-align: right;">
+	    <h2 class="nav" id="nav_aria_label">Site Menu</h2>
+		<ul id="navigation1" role="navigation" aria-labelledby="nav_aria_label" tabindex="-1">
+	        [<li><a href="{{=URL(r=request,c='default',f='index')}}">{{=T('main')}}</a></li>
+			|<li><a href="{{=URL(r=request,c='news',f='news_index')}}">{{=T('news')}}</a></li>
+			|<li><a href="{{=URL(r=request,c='language',f='aria_lang_index')}}">{{=T('language')}} : {{=session._language}}</a></li>
+			{{pass}}
+			{{if not session.authorized:}}
+  	            |<li><a href="{{=URL(a='admin' ,c='default',f='site')}}">{{=T('admin')}}</a></li>]
+			{{else:}}
+				|<li><a href="{{=URL(a='admin' ,c='default',f='logout')}}">{{=T('admin_logout')}}</a></li>]
+        {{pass}}
+        </ul>
+	</div>
+
+Misc Notes
+==========
+
+access keys
+-----------
+menu item example using access keys.
 
         [<li><a href="{{=URL(r=request,c='default',f='index')}}" "accesskey="m"">{{=T('main')}}</a></li>
 

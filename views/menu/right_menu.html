@@ -43,9 +43,9 @@ div#nav_aria a:hover, div#nav_aria a:focus {
         |<li><a href="{{=URL(r=request,c='language',f='aria_lang_index')}}">{{=T('language')}} : {{=session._language}}</a></li>
         {{pass}}
         {{if not session.authorized:}}
-            |<li><a href="{{=URL(a='admin' ,c='default',f='site')}}" "accesskey="a"">{{=T('admin')}}</a></li>]
+            |<li><a href="{{=URL(a='admin' ,c='default',f='site')}}">{{=T('admin')}}</a></li>]
         {{else:}}
-            |<li><a href="{{=URL(a='admin' ,c='default',f='logout')}}" "accesskey="a"">{{=T('admin_logout')}}</a></li>]
+            |<li><a href="{{=URL(a='admin' ,c='default',f='logout')}}">{{=T('admin_logout')}}</a></li>]
         {{pass}}
         </ul>
 </div>
