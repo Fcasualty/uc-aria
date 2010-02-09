@@ -1,0 +1,12 @@
+<h1>{{=T('Aria Settings Menu')}}</h1>
+<h2>Current Aria Settings</h2> Aria: {{=session._aria}}
+<div style="text-align: left;">
+    <div id="nav_aria" >
+        <ul id="navigation_choose_aria_settings" role="navigation" aria-labelledby="nav_aria_lang_menu" tabindex="-1">
+        <h3 class="inline" id="nav_aria_interface_aria_menu">{{=T('Choose your preferred Aria settings:')}}</h3>
+            [<li><a href="{{=URL(r=request,vars=dict(_aria='True'))}}">{{=T('Aria:On')}} : en-en</a></li>
+            |<li><a href="{{=URL(r=request,vars=dict(_aria='False'))}}">{{=T('Aria:Off')}} : en-en</a></li>
+            ]
+        </ul>
+    </div>
+</div>

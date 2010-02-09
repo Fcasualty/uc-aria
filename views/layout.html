@@ -4,6 +4,7 @@
     <title>{{=response.title or request.application}}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />     
     {{response.files.append(URL(request.application,'static','base.css'))}}
+    {{response.files.append(URL(request.application,'static','aria.css'))}}
     {{include 'web2py_ajax.html'}}
   </head>
   <body>
@@ -11,11 +12,12 @@
       <table class="layout">
         <tr>
           <td colspan="3"  class="header">
+                      {{include 'menu/aria_accessibility_menu.html'}}
             <h1>
               {{=A(response.title or request.application, _href=URL(request.application,'default','index'))}}
             </h1>            
             <h3>{{=response.subtitle or ''}}</h3>
-            {{include 'menu/right_menu.html'}}
+            {{include 'menu/aria_main_menu.html'}}
           </td>
         </tr>
         <tr>

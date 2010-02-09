@@ -4,7 +4,7 @@ uc_aria is an example app using aria menus in a web2py application.
 - implemented menu/right_menu.html in aria. Seems to be working fine.
 - removed access keys for the time being.
 
-Instructions for creating the application
+Instructions for creating the application.
 
 Views
 =====

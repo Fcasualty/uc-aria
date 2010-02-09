@@ -6,6 +6,25 @@ uc_aria is an example app using aria menus in a web2py application.
 
 Instructions for creating the application.
 
+db
+==
+
+db.py
+-----
+Near the top of db.py insert the following:
+
+	#########################################################################
+	# Aria
+	#########################################################################
+	# Site default aria settings, should be set to 'True' (set to 'False' for validating)
+	aria_default = True
+	# If I set request.vars._aria to 'True' or 'False' then store it my setting.
+	if request.vars._aria: session._aria = request.vars._aria
+	else:session._aria = aria_default
+	# Force our settings (is this really required?)
+	#if session._aria: T.force(session._aria)
+
+
 Views
 =====
 
