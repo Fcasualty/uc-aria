@@ -4,70 +4,93 @@ uc_aria is an example app using aria menus in a web2py application.
 - implemented menu/right_menu.html in aria. Seems to be working fine.
 - removed access keys for the time being.
 
-Instructions for creating the application.
+File changes
+============
+    create    models/1_aria.py
+    edit      views/layout.html
+    create    views/menu/aria\_site\_menu.html
+
+models
+======
+
+models/1_aria.py
+----------------
+Create the file models/1_aria.py and insert the following:
+
+    # coding: utf8
+    #########################################################################
+    # Aria Default Setting
+    #########################################################################
+    # Location                    : models/1_aria.py
+    # Corresponding controller    : controllers/aria.py
+    #
+    # Organization                : TBD
+    # Author                      : Christopher Steel
+    # Copyright                   : 2010
+    # Contributors                :
+    # Last Changes                : 2010-02-11
+    #
+    # Description : 1_aria.py contains our default aria settings and the code
+    # for changing the value of our session variable. Disabling aria has no
+    # effect as only aria enabled menus have been created for this
+    # applicationas of 2010-02-11.
+    # 
+    if not session._aria: session._aria = 'True'
+    # If I set request.vars._aria via the controller to 'True' or 'False'
+    # my new setting gets save to session._aria here.
+    if request.vars._aria:
+        session._aria = request.vars._aria
+
 
 Views
 =====
 
-layout.html
------------
-around line 18 of layout.html insert {{include 'menu/aria_site_menu.html'}} just after the line <h3>{{=response.subtitle or ''}}</h3> as follows:
+views/layout.html
+-----------------
+We need to make three edits to views/layout.html
 
-	{{include 'menu/aria_site_menu.html'}}
+around line 7, just after {{response.files.append(URL(request.application,'static','base.css'))}}
+we insert the following
 
-menu/aria\_site\_menu.html
-------------------------
-Create the file menu/aria\_site\_menu.html in the Views section and insert the following code. Eventually you may want to migrate out the CSS.
+    {{response.files.append(URL(request.application,'static','aria.css'))}}
 
-	<style type="text/css">
-	h2.nav {
-	position: absolute;
-	top: -20em;
-	left: -200em;
-	}
-	
-	div#nav_aria li, h2 {
-	display: inline;
-	padding-left: 0.5em;
-	background-repeat: no-repeat;
-	background-position: left center;
-	}
-	
-	div#nav_aria li.nobullet {
-	background-image: none;
-	}
-	
-	div#nav_aria a {
-	padding: 0px;
-	padding-right: 0.25em;
-	padding-left: 0.25em;
-	text-decoration: none;
-	}
-	
-	div#nav_aria a:link, div#nav_aria a:visited {
-	font-weight: bold;
-	}
-	
-	div#nav_aria a:hover, div#nav_aria a:focus {
-	color: #f5b673;
-	background-color: rgb(56,56,73);
-	}
-	</style>
-	
-	<div id="nav_aria" style="text-align: right;">
-	    <h2 class="nav" id="nav_aria_label">Site Menu</h2>
-		<ul id="navigation1" role="navigation" aria-labelledby="nav_aria_label" tabindex="-1">
-	        [<li><a href="{{=URL(r=request,c='default',f='index')}}">{{=T('main')}}</a></li>
-			|<li><a href="{{=URL(r=request,c='news',f='news_index')}}">{{=T('news')}}</a></li>
-			|<li><a href="{{=URL(r=request,c='language',f='aria_lang_index')}}">{{=T('language')}} : {{=session._language}}</a></li>
-			{{pass}}
-			{{if not session.authorized:}}
-  	            |<li><a href="{{=URL(a='admin' ,c='default',f='site')}}">{{=T('admin')}}</a></li>]
-			{{else:}}
-				|<li><a href="{{=URL(a='admin' ,c='default',f='logout')}}">{{=T('admin_logout')}}</a></li>]
-        {{pass}}
+around line 15 of views/layout.html, just after <td colspan="3"  class="header"> insert:
+
+	{{include 'menu/aria_accessibility_menu.html'}}
+
+
+views/menu/aria\_accessibility\_menu.html
+-----------------------------------------
+Create the file menu/aria\_accessibility\_menu.html and insert the following:
+
+    <div id="nav_aria" style="text-align: right;">
+        <h2 class="nav" id="nav_aria_label">Accessibility Menu</h2>
+        <ul id="navigation1" role="navigation" aria-labelledby="nav_aria_label" tabindex="-1">
+            [<li><a href="{{=URL(r=request,c='aria',f='index')}}">{{=T('accessibility')}}</a></li>
+            ]      
         </ul>
-	</div>
+    </div>
+
+views/menu/aria\_aria\_menu.html
+--------------------------------
+    <h1>{{=T('Aria Menu')}}</h1>
+    <div style="text-align: left;">
+        <div id="nav_aria" >
+            <ul id="navigation_choose_aria_settings" role="navigation" aria-labelledby="nav_aria_lang_menu" tabindex="-1">
+            <h3 class="inline" id="nav_aria_interface_aria_menu">{{=T('Aria settings:')}}</h3>
+                {{if session._aria == 'False':}}aria is currently off, choose this link to 
+                    [<li><a href="{{=URL(r=request,vars=dict(_aria='True'))}}">{{=T('turn aria on')}}</a></li>
+                {{pass}}
+                {{if session._aria == 'True':}}aria is currently on, choose this link to 
+                    [<li><a href="{{=URL(r=request,vars=dict(_aria='False'))}}">{{=T('turn aria off')}}</a></li>
+                {{pass}}            
+                ]
+            </ul>
+        </div>
+    </div>
+    {{if debugging == 'True':}}
+        <h2>Current Aria Settings</h2> Aria: {{=session._aria}}
+    {{pass}}
 
 Misc Notes
 ==========

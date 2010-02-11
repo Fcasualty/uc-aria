@@ -4,21 +4,7 @@
 #########################################################################
 # Setting to 'True' will reveal some variables values in some areas.
 debugging='False'
-#########################################################################
-# Aria
-#########################################################################
-# By default we set aria to true in order to allow users of screen
-# readers such as JAWS access. Users that wish to disable aria can do so
-# using the corresponding menu item. Some site admins may wish to do this
-# during HTML XHTML validation as aria is not fully implemented on many 
-# validators.
-#
-# Our default aria setting. Change to 'False' for some validation tests.
-if not session._aria: session._aria = 'True'
-# If I use a controller or otherwise set request.vars._aria to 'True'
-# or 'False' then store it my setting in session._aria.
-if request.vars._aria:
-    session._aria = request.vars._aria
+
 #########################################################################
 ## This scaffolding model makes your app work on Google App Engine too
 #########################################################################
