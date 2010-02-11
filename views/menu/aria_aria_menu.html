@@ -1,12 +1,18 @@
-<h1>{{=T('Aria Settings Menu')}}</h1>
-<h2>Current Aria Settings</h2> Aria: {{=session._aria}}
+<h1>{{=T('Aria Menu')}}</h1>
 <div style="text-align: left;">
     <div id="nav_aria" >
         <ul id="navigation_choose_aria_settings" role="navigation" aria-labelledby="nav_aria_lang_menu" tabindex="-1">
-        <h3 class="inline" id="nav_aria_interface_aria_menu">{{=T('Choose your preferred Aria settings:')}}</h3>
-            [<li><a href="{{=URL(r=request,vars=dict(_aria='True'))}}">{{=T('Aria:On')}} : en-en</a></li>
-            |<li><a href="{{=URL(r=request,vars=dict(_aria='False'))}}">{{=T('Aria:Off')}} : en-en</a></li>
+        <h3 class="inline" id="nav_aria_interface_aria_menu">{{=T('Aria settings:')}}</h3>
+{{if session._aria == 'False':}}aria is currently off, choose this link to 
+            [<li><a href="{{=URL(r=request,vars=dict(_aria='True'))}}">{{=T('turn aria on')}}</a></li>
+            {{pass}}
+{{if session._aria == 'True':}}aria is currently on, choose this link to 
+            |<li><a href="{{=URL(r=request,vars=dict(_aria='False'))}}">{{=T('turn aria off')}}</a></li>
+            {{pass}}            
             ]
         </ul>
     </div>
 </div>
+{{if debugging == 'True':}}
+    <h2>Current Aria Settings</h2> Aria: {{=session._aria}}
+{{pass}}
