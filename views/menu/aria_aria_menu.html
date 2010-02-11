@@ -7,7 +7,7 @@
             [<li><a href="{{=URL(r=request,vars=dict(_aria='True'))}}">{{=T('turn aria on')}}</a></li>
             {{pass}}
 {{if session._aria == 'True':}}aria is currently on, choose this link to 
-            |<li><a href="{{=URL(r=request,vars=dict(_aria='False'))}}">{{=T('turn aria off')}}</a></li>
+            [<li><a href="{{=URL(r=request,vars=dict(_aria='False'))}}">{{=T('turn aria off')}}</a></li>
             {{pass}}            
             ]
         </ul>
