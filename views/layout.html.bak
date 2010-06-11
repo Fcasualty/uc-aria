@@ -17,7 +17,6 @@
               {{=A(response.title or request.application, _href=URL(request.application,'default','index'))}}
             </h1>            
             <h3>{{=response.subtitle or ''}}</h3>
-            {{include 'menu/aria_main_menu.html'}}
           </td>
         </tr>
         <tr>
