@@ -1,0 +1,277 @@
+{{extend 'layout.html'}}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en-us">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" >
+
+<title>Welcome to The Career Center</title>
+{{response.files.append(URL(request.application,'static','aria.css'))}}
+</head>
+
+<body role="document">
+
+<div id="body" title="Career Center">
+
+  <div id="title" role="banner"  aria-labelledby="label_title" tabindex="-1'">
+
+    <a href="http://www.uiuc.edu/">
+
+    <img class="logo" alt="UIUC Home Page" src="images/vsmltraditional.gif" width="35" height="46" /> </a>
+
+    <h1 id="label_title" title="The Career Center"><a href="http://www.careercenter.uiuc.edu/"><span class="title">T</span>he
+
+    <span class="title">C</span>areer <span class="title">C</span>enter</a></h1>
+
+    <p><a class="title" href="http://www.uiuc.edu/">The University of Illinois at Urbana-Champaign</a></p>
+
+  </div>
+
+  <div id="nav1" >
+  
+    <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
+    <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
+      <li class="nobullet"><a href="http://www.uiuc.edu/">school, work, life balance</a></li>
+
+      <li><a href="http://www.uiuc.edu/">tools to get the job</a></li>
+      <li><a href="http://www.uiuc.edu/">career exploration</a></li>
+      <li><a href="http://www.uiuc.edu/">self exploration</a></li>
+    </ul>
+
+  </div>
+
+  <div id="nav2">
+
+    <h2 class="nav" id="nav2_label">Resources by Audience</h2>
+    <ul id="navigation2" role="navigation" aria-labelledby="nav2_label" tabindex="-1">
+      <li class="nobullet"><a href="http://www.uiuc.edu/">undergrads</a></li>
+      <li><a href="http://www.uiuc.edu/">graduates</a></li>
+      <li><a href="http://www.uiuc.edu/">parents</a></li>
+      <li><a href="http://www.uiuc.edu/">alumni</a></li>
+
+      <li><a href="http://www.uiuc.edu/">faculty/staff</a></li>
+      <li><a href="http://www.uiuc.edu/">employers</a></li>
+    </ul>
+
+  </div>
+
+  <!--this is the inline styling for changing the height of the leftnav bar, this might change on a per page basis!-->
+
+  <div id="leftnav">
+
+    <h2 class="nav" id="leftnav_label">Career Center Services</h2>
+    <ul id="navigation3" role="navigation" aria-labelledby="leftnav_label" tabindex="-1">
+      <li><a href="http://www.uiuc.edu/">Career Home</a></li>
+      <li><a href="http://www.uiuc.edu/">Career Counseling</a></li>
+      <li><a href="http://www.uiuc.edu/">Pre-Health Advising</a></li>
+      <li><a href="http://www.uiuc.edu/">Services</a></li>
+
+      <li><a href="http://www.uiuc.edu/">Workshops</a></li>
+      <li><a href="http://www.uiuc.edu/">Resource Center</a></li>
+      <li><a href="http://www.uiuc.edu/">Question Board/FAQ</a></li>
+    </ul>
+
+    <form id="search" action="http://www.google.com/u/uiuc-careercenter" method="get" >
+
+      <div role="search" aria-labelledby="search_box" tabindex="-1">
+
+           <label for="search_box">Search Career Center </label>
+        <input type="text" name="q" id="search_box" maxlength="255"><br/>
+           <input type="submit" title="Google Search of Career Center" value="Find" name="btnG">
+      </div>
+    </form>
+
+    <div id="contact-info" role="complementary" aria-labelledby="contact_label" tabindex="-1">
+    <h4 id="contact_label">contact info</h4>
+
+    <!-- Adjust the height of the "padding-bottom" property depending on the height of the primary content -->
+
+    <dl style="padding-bottom: 6em">
+      <dt>Location</dt>
+      <dd>715 S.Wright St.</dd>
+      <dd>Champaign, IL 61820</dd>
+
+      <dt>Hours</dt>
+
+      <dd>8:30-5:00</dd>
+
+      <dt>Phone/Fax</dt>
+      <dd>217-333-0820 (phone) </dd>
+      <dd>217-333-0122 (fax)</dd>
+
+      <dt>Email</dt>
+
+      <dd><a href="TCC-FEEDBACK@xuiuc.edu">TCC-FEEDBACK@xuiuc.edu</a></dd>
+
+    </dl>
+    </div>
+    
+  </div>
+
+<div id="content-col-1" role="main" aria-labelledby="main_label" tabindex="-1"> 
+
+  <h1 id="main_label">Welcome to The Career Center</h1>
+  
+  <p>All students and alumni are welcome to visit The Career Center and to take 
+    advantage of our services. Career counselors and health professions advisors 
+    are available for appoinmtnets. Attend a variety of workshops to obtain valuable 
+    information about how to conduct your job search, writing a winning resume, 
+    brushing up your interviewing skills, how to make an impressionat a career 
+    fair and many other topics. Visit the Resource Center to read books, do research, 
+    or for drop-in and research services.</p>
+
+  <h2>Services</h2>
+    <dl>
+       <dt><a href="http://dev.careercenter.uiuc.edu/resumes/default.asp">
+            R&eacute;sum&eacute;s and cover letters</a>
+       </dt>
+          <dd>
+
+            Some guidelines to follow, and times of drop-in review
+            services when you're ready for feedback.
+          </dd>
+       <dt><a href="http://dev.careercenter.uiuc.edu/internship/default.asp">
+            Finding internships and jobs</a>
+       </dt>
+          <dd>
+            Here are key resources for your internship and job
+            search.
+          </dd>
+       <dt><a href="http://dev.careercenter.uiuc.edu/services/mockinterview.asp">
+
+            Interviewing</a>
+       </dt>
+          <dd>
+            Interviewing is a skill which is best developed through
+            practice, which you can do with us either in-person or
+            by phone in a mock interview.
+          </dd>
+       <dt><a href="http://webtools.uiuc.edu/eventCalendar/PublicCalendar?id=340">
+            Workshops</a>
+       </dt>
+
+          <dd>
+            Salary negotiation, resume writing, pre-health issues,
+            we invite you to our various workshops.
+          </dd>
+
+       <dt><a href="http://webtools.uiuc.edu/eventCalendar/PublicCalendar?id=340">
+            Career fairs and special events</a>
+       </dt>
+          <dd>
+            Find out about career fairs and special events related
+            to careers.
+          </dd>
+
+       <dt><a href="http://dev.careercenter.uiuc.edu/services/presentations.asp">
+            Presentations on demand</a>
+       </dt>
+          <dd>
+            Our Outreach Team, trained Undergraduate students, make
+            60 minute presentations.
+          </dd>
+       <dt><a href="http://dev.careercenter.uiuc.edu/services/careercounseling.asp">
+            Career counseling</a>
+
+       </dt>
+          <dd>
+            Counselors address your specific or vague career
+            concerns, assess your interests, discuss the link
+            between majors and careers, and explore career options.
+          </dd>
+       <dt><a href="http://dev.careercenter.uiuc.edu/services/prehealth.asp">
+            Pre-Health advising</a>
+       </dt>
+          <dd>
+            Discuss the realities and strategies for pursuing
+            careers in medicine, dentistry, pharmacy or other
+            health related careers.
+          </dd>
+
+       <dt><a href="http://webtools.uiuc.edu/eventCalendar/PublicCalendar?id=340">
+            Career fairs and special events</a>
+       </dt>
+          <dd>
+            Find out about career fairs and special events related
+            to careers.
+          </dd>
+
+       <dt><a href="http://dev.careercenter.uiuc.edu/services/presentations.asp">
+            Presentations on demand</a>
+
+       </dt>
+          <dd>
+            Our Outreach Team, trained Undergraduate students, make
+            60 minute presentations.
+          </dd>
+       <dt><a href="http://dev.careercenter.uiuc.edu/services/careercounseling.asp">
+            Career counseling</a>
+       </dt>
+          <dd>
+            Counselors address your specific or vague career
+            concerns, assess your interests, discuss the link
+            between majors and careers, and explore career options.
+          </dd>
+
+       <dt><a href="http://dev.careercenter.uiuc.edu/services/prehealth.asp">
+            Pre-Health advising</a>
+       </dt>
+          <dd>
+            Discuss the realities and strategies for pursuing
+            careers in medicine, dentistry, pharmacy or other
+            health related careers.
+          </dd>
+  </dl>
+</div>
+
+  <div id="content-col-2" role="complementary" aria-labelledby="feature_label" tabindex="-1">
+
+    <h2 id="feature_label">Featured Events</h2>
+
+    <dl>
+      <dt>Biotech Fair</dt>
+        <dd>Hosted by: Biotechnology Center</dd>
+        <dd>When: Thursday, January 27 9a.m.- 12p.m. &amp; 1p.m.- 3:30p.m.</dd>
+
+        <dd>Where: Illini Union Rooms A &amp; B</dd>
+        <dd>For more info call: 333-1378</dd>
+
+      <dt>Business Career Fair</dt>
+        <dd>Hosted by: Business Career Services</dd>
+        <dd>When: February 1,2, and 3 11a.m.-4.p.m</dd>
+
+        <dd>Where: Illini Union Rooms A &amp; B &amp; C</dd>
+        <dd>For more info call: 244-8567</dd>
+    </dl>
+
+  </div>
+
+  <div id="bottomnav">
+
+    <div class="bottomnav">
+      
+    <h2 class="nav" id="bottomnav_label">Quick Links</h2>
+    <ul id="navigation4" role="navigation" aria-labelledby="bottomnav_label" tabindex="-1">
+      <li class="nobullet"><a href="http://www.uiuc.edu/">Career Services by College</a></li>
+      <li><a href="http://www.uiuc.edu/">LEO</a></li>
+      <li><a href="http://www.uiuc.edu/">I-Connect</a></li>
+
+      <li><a href="http://www.uiuc.edu/">Opportunities at TCC</a></li>
+      <li><a href="http://www.uiuc.edu/">site map</a></li>
+      <li><a href="http://www.uiuc.edu/">A-Z links</a></li>
+    </ul>
+
+  </div>
+
+    <div id="copyright" role="contentinfo" tabindex="-1">Copyright 2009 University of Illinois</div>
+
+    
+  </div>
+  
+</div>
+
+</body>
+
+</html>

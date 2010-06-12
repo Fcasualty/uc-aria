@@ -1,3 +1,7 @@
 # coding: utf8
 # try something like
 def index(): return dict(message="hello from aria.py index")
+
+# menu samples from 
+# http://test.cita.illinois.edu/aria/nav/nav1.html
+def menu_examples(): return dict(message="hello from aria.py index")
