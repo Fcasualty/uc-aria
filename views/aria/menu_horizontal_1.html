@@ -1,0 +1,24 @@
+{{extend 'layout.html'}}
+<div id="nav1" >
+    <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
+    <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
+        <li class="nobullet"><a href="http://www.uiuc.edu/">school, work, life balance</a></li>
+        <li><a href="http://www.uiuc.edu/">tools to get the job</a></li>
+        <li><a href="http://www.uiuc.edu/">career exploration</a></li>
+        <li><a href="http://www.uiuc.edu/">self exploration</a></li>
+    </ul>
+</div>
+
+{{=DIV('this', 'is', 'a', 'test', _id='123', _class='myclass')}} 
+<div id="123" class="myclass">thisisatest</div> 
+</div>
+
+<div id="nav1" >
+    {{=H2('Career Counseling Resources' , _id="nav1_label", _class="nav")}}
+    <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
+    {{=LI(A('school, work, life balance', _href="http://www.uiuc.edu/"), _class="nobullet")}}
+    {{=LI(A('tools to get the job', _href="http://www.uiuc.edu/"))}}
+    {{=LI(A('career exploration', _href="http://www.uiuc.edu/"))}}
+    {{=LI(A('self exploration', _href="http://www.uiuc.edu/"))}}
+    </ul>
+</div>
