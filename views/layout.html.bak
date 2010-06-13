@@ -15,6 +15,13 @@
         <tr>
           <td colspan="3"  class="header">
                       {{include 'menu/aria_accessibility_menu.html'}}
+
+          {{if response.menu_aria:}}
+          <div id="nav1" >
+              <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
+              {{=MENU(response.menu_aria,_id='navigation1',_role="navigation", **{'_aria-labelledby':'nav1_label'}, _tabindex='-1',_class='none')}}
+                 </div>
+                 {{pass}}
             <h1>
               {{=A(response.title or request.application, _href=URL(request.application,'default','index'))}}
             </h1>            
@@ -48,7 +55,6 @@
             <h2>{{=T('Edit This App')}}</h2>
             {{=MENU(response.menu_edit)}}
             {{pass}}
-                        {{=MENU(response.menu_language)}}
 
             <br />
           </td>

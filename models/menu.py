@@ -12,6 +12,19 @@ response.subtitle = T('customize me!')
 ## add/remove items as required
 ##########################################
 
+
+
+response.menu_aria = [
+   [T('Home'), False, URL(request.application,'default','index'), []],
+   [T('About Us'), False, URL(request.application,'nous','index'), []],
+   [T('Our Managment Team'), False, URL(request.application,T('dirigeants'),'index'), []],
+   [T('Our Expertise'), False, URL(request.application,T('expertise'),'index'), []],
+   [T('Our Work'), False, URL(request.application,'realisations','index'), []],
+   [T('Careers'), False, URL(request.application,'carrieres','index'), []],
+   [T('Request an Estimate'), False, URL(request.application,'soumission','index'), []],
+   [T('Contact Us'), False, URL(request.application,'contact','index'), []],
+]
+
 response.menu = [
     [T('Index'), False, 
      URL(request.application,'default','index'), []],

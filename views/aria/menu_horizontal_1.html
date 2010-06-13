@@ -1,13 +1,25 @@
+<!--
+Ultimatly the web2py menuing system can support the aria-descriptor format but as '-' is not legal Python one is forced to go through a number of contortions to get this technique to work. Below are some example of approaches
+
+-->
+
+<!-- standard html -->
+
+
 {{extend 'layout.html'}}
 <div id="nav1" >
     <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
     <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
-        <li class="nobullet"><a href="http://www.uiuc.edu/">school, work, life balance</a></li>
+        <li class="nobullet"><a href="http://www.uiuc.edu/">{{=T('school, work, life balance')}}</a></li>
         <li><a href="http://test.cita.illinois.edu/aria/nav/nav1.html">tools to get the job</a></li>
         <li><a href="http://www.uiuc.edu/">career exploration</a></li>
         <li><a href="http://www.uiuc.edu/">self exploration</a></li>
         </ul>
 </div>
+
+
+<!-- using some helpers -->
+
 
 <div id="nav1" >
     <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
@@ -19,6 +31,9 @@
         </ul>
 </div>
 
+<!-- using a few more helpers -->
+
+
 <div id="nav1" >
     <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
     <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
@@ -28,6 +43,10 @@
         {{=LI(A(T('self exploration'), _href='http://www.uiuc.edu/'))}}
         </ul>
 </div>
+
+<!--
+The current web2py way, notice what needs to be done to get the valid aria tag, aria-labelledby to function due to the inclusion of the hyphern in the tag.
+-->
 
 <div id="nav1" >
 <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
@@ -39,13 +58,9 @@ LI(A(T('self exploration'), _href='http://www.uiuc.edu/')),
 
 </div>
 
-
-
-{{response.menu_language = [
-   [T('Language'), False, URL(request.application,T('language'),'index'), []],
-   [T('Language'), False, URL(request.application,T('language'),'index'), []],
-   [T('Language'), False, URL(request.application,T('language'),'index'), []],
-]}}
+<!--
+here we lose our aria-label due to the same restrictions
+-->
 
 <div id="nav1" >
     <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
