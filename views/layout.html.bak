@@ -6,7 +6,7 @@
     {{response.files.append(URL(request.application,'static','base.css'))}}
     {{response.files.append(URL(request.application,'static','aria.css'))}}
     {{response.files.append(URL(request.application,'static','aria-horizontal-bar.css'))}}
-    
+    {{response.files.append(URL(request.application,'static','aria_full.css'))}}    
     {{include 'web2py_ajax.html'}}
   </head>
   <body>
@@ -48,6 +48,8 @@
             <h2>{{=T('Edit This App')}}</h2>
             {{=MENU(response.menu_edit)}}
             {{pass}}
+                        {{=MENU(response.menu_language)}}
+
             <br />
           </td>
           <td class="expandable column2">

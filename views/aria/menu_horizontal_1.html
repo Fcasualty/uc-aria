@@ -3,22 +3,51 @@
     <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
     <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
         <li class="nobullet"><a href="http://www.uiuc.edu/">school, work, life balance</a></li>
-        <li><a href="http://www.uiuc.edu/">tools to get the job</a></li>
+        <li><a href="http://test.cita.illinois.edu/aria/nav/nav1.html">tools to get the job</a></li>
         <li><a href="http://www.uiuc.edu/">career exploration</a></li>
         <li><a href="http://www.uiuc.edu/">self exploration</a></li>
-    </ul>
-</div>
-
-{{=DIV('this', 'is', 'a', 'test', _id='123', _class='myclass')}} 
-<div id="123" class="myclass">thisisatest</div> 
+        </ul>
 </div>
 
 <div id="nav1" >
-    {{=H2('Career Counseling Resources' , _id="nav1_label", _class="nav")}}
+    <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
     <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
-    {{=LI(A('school, work, life balance', _href="http://www.uiuc.edu/"), _class="nobullet")}}
-    {{=LI(A('tools to get the job', _href="http://www.uiuc.edu/"))}}
-    {{=LI(A('career exploration', _href="http://www.uiuc.edu/"))}}
-    {{=LI(A('self exploration', _href="http://www.uiuc.edu/"))}}
-    </ul>
+        <li class="nobullet"><a href="http://www.uiuc.edu/">school, work, life balance</a></li>
+        {{=LI(A(T('ARIA Examples'), _href='http://test.cita.illinois.edu/aria/'))}}
+        {{=LI(A(T('Landmark Roles - Basic Navigation Roles Example 1'), _href='http://test.cita.illinois.edu/aria/nav/nav1.php'))}}
+        {{=LI(A(T('Overview of Menubar Examples'), _href='http://test.cita.illinois.edu/aria/menubar/'))}}
+        </ul>
+</div>
+
+<div id="nav1" >
+    <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
+    <ul id="navigation1" role="navigation" aria-labelledby="nav1_label" tabindex="-1">
+        {{=LI(A(T('ARIA Site Example'), _href='http://test.cita.illinois.edu/aria/nav/nav1.html'),_class="nobullet")}}
+        {{=LI(A(T('tools to get the job'), _href='http://www.uiuc.edu/'))}}
+        {{=LI(A(T('career exploration'), _href='http://www.uiuc.edu/'))}}
+        {{=LI(A(T('self exploration'), _href='http://www.uiuc.edu/'))}}
+        </ul>
+</div>
+
+<div id="nav1" >
+<h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
+{{=UL(LI(A(T('school, work, life balance'), _href='http://www.uiuc.edu/'),_class="nobullet"),
+LI(A(T('tools to get the job'), _href='http://www.uiuc.edu/')),
+LI(A(T('career exploration'), _href='http://www.uiuc.edu/')),
+LI(A(T('self exploration'), _href='http://www.uiuc.edu/')),
+**{'_id':'navigation1', '_role':'navigation', '_aria-labelledby':'nav1_label', '_tabindex':'-1'})}}
+
+</div>
+
+
+
+{{response.menu_language = [
+   [T('Language'), False, URL(request.application,T('language'),'index'), []],
+   [T('Language'), False, URL(request.application,T('language'),'index'), []],
+   [T('Language'), False, URL(request.application,T('language'),'index'), []],
+]}}
+
+<div id="nav1" >
+    <h2 class="nav" id="nav1_label">Career Counseling Resources</h2>
+{{=MENU(response.menu_language)}}
 </div>

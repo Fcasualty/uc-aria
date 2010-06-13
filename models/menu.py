@@ -17,6 +17,11 @@ response.menu = [
      URL(request.application,'default','index'), []],
     ]
 
+response.menu_language = [
+   [T('Language'), False, URL(request.application,T('language'),'index'), []],
+   [T('Language'), False, URL(request.application,T('language'),'index'), []],
+   [T('Language'), False, URL(request.application,T('language'),'index'), []],
+]
 
 ##########################################
 ## this is here to provide shortcuts
